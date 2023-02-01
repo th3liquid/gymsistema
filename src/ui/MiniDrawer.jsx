@@ -19,11 +19,13 @@ import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
 import { DashboardPage } from "../pages/dashboard/DashboardPage";
 import { Grid } from "@mui/material";
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { LoginPage } from "../pages/login/LoginPage";
 import { RouterGym } from "../router/RouterGym";
 import { CheckInPage } from "../pages/checkin/CheckInPage";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
+import { ClientsPage } from "../pages/clients/ClientsPage";
 
 const drawerWidth = 240;
 
@@ -37,28 +39,74 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <Grid>
-      <Toolbar />
+      <Grid container sx={{display: 'flex', justifyContent: 'center', paddingTop: '30px', paddingBottom: '30px'}}>
+
+      <Typography>LOGO</Typography>
+      </Grid>
+      
       <Divider />
 
       <Grid container>
-        <Grid item sx={{ display: "flex", justifyContent: 'start', marginLeft: '15px', paddingTop: '10px', paddingBottom: '10px' }} xs={12}>
+        <Grid
+          item
+          sx={{
+            display: "flex",
+            justifyContent: "start",
+            marginLeft: "15px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+          }}
+          xs={12}
+        >
           <DashboardIcon />
-          <NavLink to="/" component={<DashboardPage />}><Typography sx={{marginLeft: '30px'}}>Dashboard</Typography></NavLink>
-          
+          <NavLink to="/" component={<DashboardPage />}>
+            <Typography sx={{ marginLeft: "30px" }}>Dashboard</Typography>
+          </NavLink>
         </Grid>
       </Grid>
 
       <Divider />
       <Grid container>
-        <Grid item sx={{ display: "flex", justifyContent: 'start', marginLeft: '15px', paddingTop: '10px', paddingBottom: '10px' }} xs={12}>
+        <Grid
+          item
+          sx={{
+            display: "flex",
+            justifyContent: "start",
+            marginLeft: "15px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+          }}
+          xs={12}
+        >
           <CheckCircleIcon />
-          <NavLink to="checkin" component={<CheckInPage />}><Typography sx={{marginLeft: '30px'}}>Check In</Typography></NavLink>
-          
+          <NavLink to="checkin" component={<CheckInPage />}>
+            <Typography sx={{ marginLeft: "30px" }}>Check In</Typography>
+          </NavLink>
         </Grid>
       </Grid>
 
       <Divider />
-     
+      
+      <Grid container>
+        <Grid
+          item
+          sx={{
+            display: "flex",
+            justifyContent: "start",
+            marginLeft: "15px",
+            paddingTop: "10px",
+            paddingBottom: "10px",
+          }}
+          xs={12}
+        >
+          <PeopleAltIcon />
+          <NavLink to="clientes" component={<ClientsPage />}>
+            <Typography sx={{ marginLeft: "30px" }}>Clientes</Typography>
+          </NavLink>
+        </Grid>
+      </Grid>
+
+      <Divider />
     </Grid>
   );
 
@@ -130,6 +178,7 @@ function ResponsiveDrawer(props) {
         component="main"
         sx={{
           flexGrow: 1,
+          
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}

@@ -7,9 +7,9 @@ export const DashboardPage = () => {
     <>
       <Grid container>
         <Grid item xs={12}>
-          <Card sx={{margin: '5px'}}>
-            <Typography variant="h4">Dashboard Page</Typography>
-          </Card>
+          
+            <Typography variant="h4" >Dashboard </Typography>
+          
         </Grid>
       </Grid>
     </>
