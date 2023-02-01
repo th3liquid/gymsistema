@@ -26,7 +26,7 @@ body {
   background: transparent;
   border-color: transparent;
 
-  color: hsl(205, 78%, 60%);
+  color: hsl(0, 0%, 0%);
   cursor: pointer;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 .sidebar-toggle:hover {
-  color: hsl(205, 90%, 76%);
+  color: hsl(0, 0%, 25%);
 
 }
 
@@ -72,7 +72,7 @@ body {
   font-size: 1.5rem;
   text-transform: capitalize;
   padding: 1rem 1.5rem;
-  color: hsl(2010, 22%, 49%);
+  color: rgb(0, 0, 0);
   transition: all 0.3s linear;
   cursor: pointer;
 }
