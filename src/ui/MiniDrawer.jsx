@@ -34,6 +34,7 @@ import { PagosPage } from "../pages/pagos/PagosPage";
 import { SucursalesPage } from "../pages/sucursales/SucursalesPage";
 import { MembresiasPage } from "../pages/membresias/MembresiasPage";
 import DiamondIcon from "@mui/icons-material/Diamond";
+import { Footer } from "../pages/footer/Footer";
 
 const drawerWidth = 240;
 
@@ -284,6 +285,7 @@ function ResponsiveDrawer(props) {
       >
         <Toolbar />
         <RouterGym />
+        <Footer />
       </Box>
     </Box>
   );

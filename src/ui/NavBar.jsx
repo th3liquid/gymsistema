@@ -5,23 +5,16 @@ import { links } from "./data";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import { NavLink } from "react-router-dom";
 import MiniDrawer from "./MiniDrawer";
+import { Footer } from "../pages/footer/Footer";
 
 export const NavBar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 600 && isNavOpen) {
-        setIsNavOpen(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.addEventListener("resize", handleResize);
-  }, [isNavOpen]);
+
 
   return (
     <>
       
         <MiniDrawer />
+        
         
       
     </>
