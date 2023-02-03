@@ -18,7 +18,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
 import { DashboardPage } from "../pages/dashboard/DashboardPage";
-import { Grid } from "@mui/material";
+import { Avatar, Grid } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { LoginPage } from "../pages/login/LoginPage";
@@ -26,14 +26,14 @@ import { RouterGym } from "../router/RouterGym";
 import { CheckInPage } from "../pages/checkin/CheckInPage";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import { ClientsPage } from "../pages/clients/ClientsPage";
-import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
-import StoreIcon from '@mui/icons-material/Store';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import BookmarkAddedIcon from "@mui/icons-material/BookmarkAdded";
+import StoreIcon from "@mui/icons-material/Store";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import { UsuariosPage } from "../pages/usuarios/UsuariosPage";
 import { PagosPage } from "../pages/pagos/PagosPage";
 import { SucursalesPage } from "../pages/sucursales/SucursalesPage";
 import { MembresiasPage } from "../pages/membresias/MembresiasPage";
-import DiamondIcon from '@mui/icons-material/Diamond';
+import DiamondIcon from "@mui/icons-material/Diamond";
 
 const drawerWidth = 240;
 
@@ -56,7 +56,7 @@ function ResponsiveDrawer(props) {
           paddingBottom: "30px",
         }}
       >
-        <DiamondIcon sx={{fontSize: '100px'}} />
+        <DiamondIcon sx={{ fontSize: "100px" }} />
       </Grid>
 
       <Divider />
@@ -191,7 +191,7 @@ function ResponsiveDrawer(props) {
           xs={12}
         >
           <PeopleAltIcon />
-          <NavLink to="usuarios" component={<UsuariosPage/>}>
+          <NavLink to="usuarios" component={<UsuariosPage />}>
             <Typography sx={{ marginLeft: "30px" }}>Usuarios</Typography>
           </NavLink>
         </Grid>
@@ -214,7 +214,7 @@ function ResponsiveDrawer(props) {
         }}
       >
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
@@ -222,10 +222,19 @@ function ResponsiveDrawer(props) {
             sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Sistema Gym
-          </Typography>
+          </IconButton> */}
+          <Grid container>
+            <Grid item sx={{display: 'flex'}} xs={12}>
+              <Grid item xs={6}>
+                <Typography variant="h6" noWrap component="div">
+                  Sistema Gym
+                </Typography>
+              </Grid>
+              <Grid item sx={{display: 'flex', justifyContent: 'end'}} xs={6}>
+                <Avatar></Avatar>
+              </Grid>
+            </Grid>
+          </Grid>
         </Toolbar>
       </AppBar>
       <Box
